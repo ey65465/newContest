@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../contest/static/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css"/>
+    <script src="../contest/static/bootstrap/js/bootstrap/3.3.6/bootstrap.js"></script>
+    <script src="../contest/static/js/jquery.min.js"></script>
+
+    <link href="../contest/static/css/home.css" rel="stylesheet"/>
+    <script src="../contest/static/js/home.js"></script>
+
+    <title>公共题库</title>
+
+</head>
+<body>
+    {% include "header.html" %}
+
+    <div class="bread">
+        <a href="#" style="cursor: default">题库</a>
+        <span style="font-weight: bold; color: #9d9d9d; display: inline-block; margin: 0px 5px;">&gt;</span>
+        <a href="#" style="cursor: default" class="title">公共题库</a>
+    </div>
+
+    <div class = "leader">
+        <table>
+            <div style="display: none;" class="page_mark" mark="{{ mark }}"></div>
+            <tr class="page_leader">
+                <td><a href="/home/" class="public"><span class="glyphicon glyphicon-calendar"></span> 公共题库</a></td>
+                <td><a href="#" class="private"><span class="glyphicon glyphicon-home"></span> 我的题库</a></td>
+                <td><a href="/question/?type=single" class="single"><span class="glyphicon glyphicon-font"></span> 单选题库</a></td>
+                <td><a href="/question/?type=multiple" class="multiple"><span class="glyphicon glyphicon-bold"></span> 多选题库</a></td>
+                <td><a href="/question/?type=judge" class="judge"><span class="glyphicon glyphicon-ok-circle"></span> 判断题库</a></td>
+                <td><a href="/question/?type=programming" class="programming"><span class="glyphicon glyphicon-blackboard"></span> 编程题库</a></td>
+                <td><a href="#" class="add"><span class="glyphicon glyphicon-plus-sign"></span> 出题</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content">
+
+    </div>
+</body>
+
+{% include "choose.html" %}
+
+{% include "add.html" %}
+
+{% include "footer.html" %}
+
+</html>
+

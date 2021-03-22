@@ -1,0 +1,53 @@
+@font-face {
+    font-family: myfont;
+    src: url("../font/方正粗黑简体.TTF");
+}
+@font-face {
+    font-family: myfont1;
+    src: url("../font/方正正黑简体.TTF");
+}
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+}
+.header{
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    background-color: cadetblue;
+    box-shadow: 5px 0px 5px black;
+}
+.home_link{
+    height: 58px;
+}
+.home_link a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 60px;
+    width: 120px;
+    color: whitesmoke;
+    font-family: myfont;
+    font-size: 25px;
+    text-align: center;
+}
+a.question_bank{
+    background-color: #ce8483;
+}
+.my_pic{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    float: right;
+    background-color: whitesmoke;
+    margin-right: 2%;
+}
+.my_img{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.my_img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+

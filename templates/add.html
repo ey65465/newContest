@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出题</title>
+
+    <link href="../contest/static/css/add.css" rel="stylesheet"/>
+    <script src="../contest/static/js/add.js" rel="script"></script>
+    <script>
+            $.ajaxSetup({
+                data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+            })
+    </script>
+</head>
+<body style="font-size: 15px;">
+    <div class="add_page">
+        <div class="'add_leader">
+            <table class="add_leader_table">
+                <tr>
+                    <td class="add_single"><a href="#" class="add_single" mark="yes">单选题</a></td>
+                    <td class="add_multiple"><a href="#" class="add_multiple" mark="no">多选题</a></td>
+                    <td class="add_judge"><a href="#" class="add_judge" mark="no">判断题</a></td>
+                    <td class="add_programming"><a href="#" class="add_programming" mark="no">编程题</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="add_div">
+            <table class="add_option">
+                <tr>
+                    <td colspan="3">
+                        <div>题目涉及知识</div>
+                        <input type="text" style="width: 100%;" class="knowledge"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div>题目描述</div><textarea rows="5" style="width: 100%;" class="question_content"></textarea></td>
+                    <td>
+                        <form class="upload_img" method="post" enctype="multipart/form-data">{% csrf_token %}
+                            <input type="file" style="width: 70%;display: inline-block;" class="question_img" name="img"/>
+                        </form>
+                        （可选）
+                        <img src="" class="test"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;"><button class="add_option" onclick="add()">添加选项</button></td>
+                    <td style="width: 20%;"></td>
+                    <td style="width: 20%;"></td>
+                </tr>
+
+                <tr class="answer">
+                    <td colspan="3">
+                        <span style="font-size: 16px;font-weight: bold;display: inline-block;">正确答案：</span>
+                    </td>
+                </tr>
+
+                <tr class="authority">
+                    <td colspan="3">
+                        <span style="font-size: 16px; font-weight: bold;">题目权限：</span>
+                        <input type="radio" name="auth" checked="checked" value="私人题目"/><span>私人题目</span>
+                        <input type="radio" name="auth" value="公共题目"/><span>公共题目</span>
+                    </td>
+                </tr>
+
+            </table>
+            <button class="add_save" onclick="save()">保存题目</button>
+            <button class="add_check">题目预览</button>
+            <span class="tip" style="color: red; font-size: 15px; visibility: hidden">题目信息不正确</span>
+        </div>
+
+    </div>
+</body>
+</html>

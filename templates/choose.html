@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../contest/static/css/choose.css" />
+    <script rel="script" src="../contest/static/js/choose.js"></script>
+
+</head>
+<body>
+    <div class = "single_page">
+        <table class="question_page">
+            <tr style="height: 50px;width: 100%;background-color: whitesmoke;border-bottom: 1px solid lightgray; font-weight: bold; color: gray;">
+                <td style="width: 100px;padding-left: 10px;">序号</td>
+                <td style="width: 50%;">题目考查知识</td>
+                <td style="width: 100px;">答题数</td>
+                <td style="width: 100px;">正确数</td>
+                <td style="width: 20%;">正确率</td>
+                <td>创建时间</td>
+            </tr>
+            {% for question in questionList %}
+                <tr style="height: 50px;color: #080808;border-bottom: 1px solid lightgray;" class = "single_content">
+                    <td style="padding-left: 10px;">{{ question.id }}</td>
+                    <td><a href="/getQuestion/?qid={{ question.id }}" class="question_about" style="text-decoration: none;">{{ question.about }}</a></td>
+                    <td class="single_finish_times">{{ question.finish_times }}</td>
+                    <td class="single_correct_times">{{ question.currect_times }}</td>
+                    <td class="single_rate">
+                        <div style="width: 70%;height: 20px;border: 1px solid black;background-color: white; border-radius: 3px;">
+                            <div style="background-color: cadetblue; height: 18px; width:50%; text-align: center; color: #3c3c3c;font-size: 13px;" class="single_correct_rate">50%</div>
+                        </div>
+                    </td>
+                    <td>{{ question.create_date|date:"Y/m/d" }}</td>
+{#                    <div class="question_alert_page">#}
+{#                        <div class="bg"></div>#}
+{#                        <div class="question_alert">#}
+{#                            <span class="question_close">X</span>#}
+{#                            <div class="question_content"></div>#}
+{#                        </div>#}
+{#                    </div>#}
+
+                </tr>
+
+            {% endfor %}
+            </table>
+
+    </div>
+</body>
+</html>

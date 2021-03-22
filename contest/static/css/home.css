@@ -1,0 +1,71 @@
+@font-face {
+    font-family: myfont;
+    src: url("../font/方正粗黑简体.TTF");
+}
+@font-face {
+    font-family: myfont1;
+    src: url("../font/方正正黑简体.TTF");
+}
+
+.bread{
+    width: 60%;
+    line-height: 40px;
+    background-color: white;
+    margin: 15px auto;
+    padding-left: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.bread a{
+    text-decoration: none;
+    color: #444444;
+}
+
+.content{
+    width: 60%;
+    margin: 0px auto;
+    background-color: white;
+
+}
+.leader{
+    width: 60%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+table{
+    width: 100%;
+}
+table tr td{
+    width: 14.4%;
+}
+
+.leader a{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    color: whitesmoke;
+    font-size: 16px;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+}
+.leader a:hover{
+    border-color: #3c3c3c;
+    opacity: 0.85;
+}
+
+.leader a.public, a.private{
+    background-color: #dca7a7;
+}
+.leader a.single, a.multiple, a.judge, a.programming{
+    background-color: #28a4c9;
+}
+.leader a.add{
+    background-color: #5cb85c;
+}
+a.public{
+    font-weight: bold;
+    font-size: 17px;
+    color: #444444;
+}

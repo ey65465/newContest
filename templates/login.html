@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="../contest/static/bootstrap/css/bootstrap/3.3.6/bootstrap.min.css"/>
+    <script src="../contest/static/bootstrap/js/bootstrap/3.3.6/bootstrap.js"></script>
+
+    <link href="../contest/static/css/login.css" rel="stylesheet"/>
+    <script src="../contest/static/js/jquery.min.js"></script>
+    <script src="../contest/static/js/login.js"></script>
+
+    <script>
+            $.ajaxSetup({
+                data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+            })
+    </script>
+</head>
+<body>
+    <form action="/home/" class = "myform" method="post">{% csrf_token %}
+        <div class = "title">考试系统</div>
+        <input type="text" placeholder="账号" class = "id">
+        <div class = "id_tip"></div>
+        <input type="password" placeholder="密码" class = "pw">
+        <div class = "pw_tip"></div>
+        <input type="button" value="登 录" class = "login">
+        <div class = "back_pannel"></div>
+        <div class = "tip">
+            <span class="glyphicon glyphicon-remove-sign" style="color: red;display: inline-block;margin-right: 5px;"></span>
+            <span class = "word"></span>
+        </div>
+    </form>
+
+<!--<iframe src="footer.html" frameborder="no" height="30px" width="100%" align="center" scrolling="no"></iframe>-->
+</body>
+{% include "footer.html" %}
+</html>

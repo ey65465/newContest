@@ -1,0 +1,107 @@
+.add_page{
+    width: 60%;
+    background-color: white;
+    margin: 15px auto;
+    display: none;
+    font-size: 15px;
+}
+table.add_leader_table tr td a{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 40px;
+    color: cadetblue;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid lightgray;
+}
+table.add_leader_table tr td a[mark="yes"]{
+    color: #3c3c3c;
+    font-weight: bold;
+    cursor: default;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-bottom: white;
+}
+table.add_leader_table tr td a[mark="no"]:hover{
+    background-color: #e8e8e8;
+}
+div.add_div {
+    width: 80%;
+    margin: 30px auto;
+}
+table.add_option tr td{
+    padding: 10px 15px;
+}
+button.add_save, button.add_check{
+    margin: 15px 15px;
+}
+table.add_option{
+    border-bottom: 1px solid gray;
+}
+div.add_div input[type="text"], textarea{
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    resize: none;
+}
+div.add_div input[type="text"]:focus{
+    border-color: cadetblue;
+    box-shadow: 0px 0px 1px cadetblue;
+}
+div.add_div textarea:focus{
+    border-color: cadetblue;
+    box-shadow: 0px 0px 1px cadetblue;
+}
+button.add_option{
+    background-color: white;
+    border: 1px solid gray;
+    color: #3c3c3c;
+    outline: none;
+    width: 80px;
+    height: 32px;
+    border-radius: 3px;
+}
+button.add_option:hover{
+    border-color: cadetblue;
+    color: cadetblue;
+}
+div.add_div textarea{
+    padding: 5px;
+    color: black;
+}
+div.add_div input[type="text"]{
+    height: 33px;
+    padding: 5px 10px;
+}
+div.add_div table tr td div{
+    font-size: 15px;
+    font-weight: bold;
+}
+button.add_save, button.add_check{
+    width: 80px;
+    height: 32px;
+    color: white;
+    outline: none;
+}
+button.add_save{
+    background-color: cadetblue;
+    border: 1px solid cadetblue;
+    border-radius: 3px;
+}
+button.add_check{
+    background-color: #ce8483;
+    border: 1px solid #ce8483;
+    border-radius: 3px;
+}
+button.add_save:hover{
+    opacity: 0.9;
+}
+button.add_check:hover{
+    opacity: 0.9;
+}
+tr.authority td input{
+    margin-left: 20px;
+    margin-right: 1px;
+}
